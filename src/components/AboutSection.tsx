@@ -75,7 +75,7 @@ const AboutSection = () => {
                     KIT's College of Engineering, Kolhapur
                   </p>
                   <div className="inline-flex items-center gap-1.5 mt-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-                    <span>Expected Graduation: 2027</span>
+                    <span>Graduation: 2027</span>
                   </div>
                 </div>
               </div>
@@ -85,7 +85,7 @@ const AboutSection = () => {
           {/* Right Content - Highlight Cards */}
           <div className="grid sm:grid-cols-2 gap-5 relative">
             <div className="absolute inset-0 bg-gradient-radial from-primary/5 to-transparent blur-3xl pointer-events-none" />
-            
+
             {highlights.map((item, index) => (
               <div
                 key={item.title}

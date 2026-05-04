@@ -1,5 +1,6 @@
 import { ArrowDown, Github, Linkedin, Mail, Download, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import resumePdf from "@/assets/resume.pdf";
 
 const HeroSection = () => {
   return (
@@ -61,7 +62,7 @@ const HeroSection = () => {
             </Button>
 
             <Button className="rounded-full px-8 py-6 text-base text-primary hover:text-primary-foreground hover:bg-primary border border-primary/20 transition-all duration-300" variant="ghost" size="lg" asChild>
-              <a href="/resume.pdf" download="Samiksha_Pharakate_Resume.pdf" className="flex items-center gap-2">
+              <a href={resumePdf} target="_blank" rel="noopener noreferrer" download="Samiksha_Pharakate_Resume.pdf" className="flex items-center gap-2">
                 <Download size={18} />
                 Download Resume
               </a>

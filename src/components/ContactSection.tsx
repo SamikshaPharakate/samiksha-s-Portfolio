@@ -54,10 +54,11 @@ const ContactSection = () => {
       } else {
         throw new Error(data.message || "Failed to send message.");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Web3Forms failed:", err);
       setStatus("error");
-      setErrorMsg(err.message || "Failed to send message. Please try again.");
+      const errMsg = err instanceof Error ? err.message : "Failed to send message. Please try again.";
+      setErrorMsg(errMsg);
     }
   };
 

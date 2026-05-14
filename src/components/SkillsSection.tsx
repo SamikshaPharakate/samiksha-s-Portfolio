@@ -55,14 +55,17 @@ const logos: Record<string, string> = {
   "npm": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
 };
 
+const invertIcons = ["Express.js", "GitHub", "npm"];
+
 const Logo = ({ name }: { name: string }) => {
   const [error, setError] = useState(false);
   const src = logos[name];
+  
   return src && !error ? (
     <img
       src={src}
       alt={name}
-      className="w-7 h-7 object-contain"
+      className={`w-7 h-7 object-contain ${invertIcons.includes(name) ? "brightness-0 invert" : ""}`}
       loading="lazy"
       onError={() => setError(true)}
     />

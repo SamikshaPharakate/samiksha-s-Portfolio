@@ -60,7 +60,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground hover:shadow-glow transition-all duration-300" variant="hero" size="sm" asChild>
+            <Button className="rounded-full shadow-glow transition-all duration-300" variant="hero" size="sm" asChild>
               <a href="#contact">Get in Touch</a>
             </Button>
           </div>
@@ -94,7 +94,7 @@ const Navigation = () => {
               {link.name}
             </a>
           ))}
-          <Button className="mt-4 rounded-xl w-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground transition-all duration-300" variant="hero" size="default" asChild>
+          <Button className="mt-4 rounded-xl w-full transition-all duration-300" variant="hero" size="default" asChild>
             <a href="#contact" onClick={() => setIsOpen(false)}>
               Get in Touch
             </a>

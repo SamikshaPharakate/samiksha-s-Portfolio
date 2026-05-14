@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Send, Mail, MapPin, Github, Linkedin } from "lucide-react";
 
-// ─── WEB3FORMS CREDENTIALS ─────────────────────────────────────────────────
-// Go to https://web3forms.com/ and enter your email to get a free access key
-const WEB3FORMS_ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+// ─── FORMSUBMIT CREDENTIALS ─────────────────────────────────────────────────
+// FormSubmit doesn't require an API key! The first time someone submits the form,
+// you will receive an activation email. Just click "Activate" in that email.
 const RECIPIENT_EMAIL = "samikshaspharakate070515@gmail.com";
 // ──────────────────────────────────────────────────────────────────────────────
 
@@ -31,18 +31,19 @@ const ContactSection = () => {
     setErrorMsg("");
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
           name: name,
           email: email,
           subject: subject,
           message: message,
+          _replyto: email, // This allows you to reply directly to the sender
+          _captcha: "false" // Disables the formsubmit.co captcha page for seamless submission
         }),
       });
 
@@ -55,7 +56,7 @@ const ContactSection = () => {
         throw new Error(data.message || "Failed to send message.");
       }
     } catch (err: unknown) {
-      console.error("Web3Forms failed:", err);
+      console.error("FormSubmit failed:", err);
       setStatus("error");
       const errMsg = err instanceof Error ? err.message : "Failed to send message. Please try again.";
       setErrorMsg(errMsg);

@@ -7,45 +7,45 @@
 
 @layer base {
   :root {
-    --background: 240 10% 4%;
-    --foreground: 0 0% 100%;
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 240 10% 6%;
-    --card-foreground: 0 0% 100%;
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 240 10% 6%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 222 47% 6%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 267 100% 61%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 240 5% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 217 32% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 316 100% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 240 10% 12%;
-    --input: 240 10% 12%;
-    --ring: 267 100% 61%;
+    --border: 217 32% 12%;
+    --input: 217 32% 12%;
+    --ring: 217 91% 60%;
 
     --radius: 1rem;
 
-    /* Premium Modern Custom tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(267 100% 61%) 0%, hsl(316 100% 60%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(190 90% 50%) 0%, hsl(267 100% 61%) 100%);
-    --gradient-skills: linear-gradient(135deg, hsl(316 100% 60%) 0%, hsl(35 100% 60%) 100%);
-    --gradient-services: linear-gradient(135deg, hsl(190 90% 50%) 0%, hsl(140 80% 50%) 100%);
-    --gradient-projects: linear-gradient(135deg, hsl(20 100% 60%) 0%, hsl(340 100% 60%) 100%);
-    --gradient-contact: linear-gradient(135deg, hsl(267 100% 61%) 0%, hsl(190 90% 50%) 100%);
-    --gradient-card: linear-gradient(160deg, hsl(240 10% 8%) 0%, hsl(240 10% 4%) 100%);
-    --gradient-glow: radial-gradient(circle at center, hsl(267 100% 61% / 0.15) 0%, transparent 60%);
+    /* Professional Modern Custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(199 89% 48%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(175 70% 41%) 100%);
+    --gradient-skills: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(260 80% 60%) 100%);
+    --gradient-services: linear-gradient(135deg, hsl(175 70% 41%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-projects: linear-gradient(135deg, hsl(260 80% 60%) 0%, hsl(316 70% 60%) 100%);
+    --gradient-contact: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(199 89% 48%) 100%);
+    --gradient-card: linear-gradient(160deg, hsl(222 47% 8%) 0%, hsl(222 47% 4%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(217 91% 60% / 0.1) 0%, transparent 60%);
     
     --shadow-glow: 0 0 80px hsl(267 100% 61% / 0.15);
     --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
@@ -54,14 +54,14 @@
     --font-heading: 'Outfit', 'DM Sans', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    --sidebar-background: 240 10% 4%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 267 100% 61%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 5% 15%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 240 10% 12%;
-    --sidebar-ring: 267 100% 61%;
+    --sidebar-background: 222 47% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 32% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 32% 12%;
+    --sidebar-ring: 217 91% 60%;
   }
 }
 
@@ -78,15 +78,8 @@
     @apply bg-background text-foreground;
     font-family: var(--font-body);
 
-    /* Rich creative multi-layer gradient background */
-    background:
-      radial-gradient(circle at 15% 20%, hsl(340 75% 45% / 0.28), transparent 55%),
-      radial-gradient(circle at 85% 80%, hsl(220 70% 48% / 0.28), transparent 55%),
-      radial-gradient(circle at 50% 10%, hsl(15 85% 55% / 0.32), transparent 65%),
-      radial-gradient(circle at 80% 20%, hsl(280 65% 38% / 0.22), transparent 58%),
-      radial-gradient(circle at 20% 80%, hsl(195 70% 33% / 0.22), transparent 58%),
-      radial-gradient(circle at 60% 50%, hsl(175 65% 25% / 0.18), transparent 60%),
-      linear-gradient(135deg, hsl(220 28% 7%), hsl(220 20% 4%) 42%, hsl(225 22% 5%) 100%);
+    /* Professional, clean dark gradient background */
+    background: linear-gradient(to bottom right, hsl(222 47% 5%), hsl(222 47% 2%));
 
     background-attachment: fixed;
     background-repeat: no-repeat;
